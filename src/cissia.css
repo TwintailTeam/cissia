@@ -1,0 +1,289 @@
+@layer base {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+:root {
+    --stagger-delay: 0ms;
+}
+
+img,
+svg,
+button,
+[role="button"],
+.sidebar,
+.menu,
+.icon,
+label {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+img {
+    pointer-events: auto;
+    -webkit-user-drag: none;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInOpacity {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0.01; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes zoomOut {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.01; transform: scale(0.95); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUpToPosition {
+    from { transform: translateY(0); }
+    to { transform: translateY(0px); }
+}
+
+@keyframes slideDownToPosition {
+    from { transform: translateY(0px); }
+    to { transform: translateY(0); }
+}
+
+@keyframes dropPop {
+    0% { transform: scale(0.85); opacity: 0.7; }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes downloadAttentionPop {
+    0% { filter: brightness(1); }
+    35% { filter: brightness(1.35); }
+    65% { filter: brightness(1.1); }
+    100% { filter: brightness(1); }
+}
+
+@keyframes downloadAddedBurst {
+    0% { opacity: 0; transform: translateX(20px) scale(2.05); }
+    12% { opacity: 0.95; }
+    100% { opacity: 0; transform: translateX(0px) scale(0.72); }
+}
+
+@keyframes downloadQueueBadgePop {
+    0% { opacity: 0; transform: scale(0.5) translateY(3px); }
+    50% { opacity: 1; transform: scale(1.18) translateY(-1px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes backdropIn {
+    0% { opacity: 0.01; }
+    100% { opacity: 1; }
+}
+
+.animate-fadeIn {
+    animation: fadeInOpacity 400ms ease-out;
+    animation-fill-mode: both;
+}
+
+.animate-slideUp {
+    animation: slideUp 400ms ease-out;
+    animation-fill-mode: both;
+}
+
+.animate-slideDown {
+    animation: slideDown 400ms ease-out;
+    animation-fill-mode: both;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 300ms ease-out;
+    animation-fill-mode: both;
+}
+
+.animate-slideInLeft-stagger {
+    animation: slideInLeft 300ms ease-out;
+    animation-fill-mode: both;
+    animation-delay: var(--stagger-delay, 0ms);
+}
+
+.animate-slideInRight {
+    animation: slideInRight 400ms ease-out;
+    animation-fill-mode: both;
+}
+
+.animate-slideUpToPosition {
+    animation: slideUpToPosition 300ms ease-in;
+    animation-fill-mode: both;
+}
+
+.animate-slideDownToPosition {
+    animation: slideDownToPosition 300ms ease-out;
+    animation-fill-mode: both;
+}
+
+.animate-drop-pop {
+    animation: dropPop 200ms ease-out;
+    animation-fill-mode: both;
+}
+
+.animate-zoom-in {
+    animation: zoomIn 200ms ease-out both;
+}
+
+.animate-zoom-out {
+    animation: zoomOut 200ms ease-in forwards;
+}
+
+.animate-download-attention-pop {
+    animation: downloadAttentionPop 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: both;
+}
+
+.animate-download-added-burst {
+    animation: downloadAddedBurst 240ms linear;
+    animation-fill-mode: both;
+}
+
+.animate-download-queue-badge-pop {
+    animation: downloadQueueBadgePop 170ms cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: both;
+}
+
+.animate-backdrop-in {
+    animation: backdropIn 200ms ease-out both;
+}
+
+.animate-slideInLeft,
+.animate-slideInRight,
+.animate-slideUp,
+.animate-slideDown,
+.animate-slideUpToPosition,
+.animate-slideDownToPosition,
+.animate-fadeIn,
+.animate-download-attention-pop,
+.animate-download-added-burst,
+.animate-download-queue-badge-pop {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.animate-zoom-in,
+.animate-zoom-out,
+.animate-backdrop-in {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    contain: layout paint;
+}
+
+.scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-thin {
+    scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
+    scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+    border-radius: var(--scrollbar-track-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: var(--scrollbar-thumb-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner {
+    background-color: var(--scrollbar-corner, var(--scrollbar-track));
+    border-radius: var(--scrollbar-corner-radius, var(--scrollbar-track-radius));
+}
+
+.scrollbar-track-transparent {
+    --scrollbar-track: transparent;
+}
+
+.scrollbar-thumb-white\/20 {
+    --scrollbar-thumb: rgb(255 255 255 / 0.2);
+}
+
+.hover\:scrollbar-thumb-white\/30:hover {
+    --scrollbar-thumb: rgb(255 255 255 / 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-fadeIn,
+    .animate-slideUp,
+    .animate-slideDown,
+    .animate-slideInLeft,
+    .animate-slideInRight,
+    .animate-slideUpToPosition,
+    .animate-slideDownToPosition,
+    .animate-download-attention-pop,
+    .animate-download-added-burst,
+    .animate-download-queue-badge-pop {
+        animation: none;
+    }
+}

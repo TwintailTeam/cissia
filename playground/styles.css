@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "../src/cissia.css";
+
+@source "../src";
+
+body {
+    background: #000;
+    margin: 0;
+}
