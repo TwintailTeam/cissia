@@ -17,7 +17,7 @@ importers:
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.3.3
-        version: 4.3.3(vite@8.2.2(@types/node@26.4.1)(jiti@2.7.0))
+        version: 4.3.3(vite@8.2.4(@types/node@26.4.1)(jiti@2.7.0))
       '@types/node':
         specifier: ^26.4.1
         version: 26.4.1
@@ -32,7 +32,7 @@ importers:
         version: 6.0.2
       '@vitejs/plugin-react':
         specifier: ^6.1.1
-        version: 6.1.1(vite@8.2.2(@types/node@26.4.1)(jiti@2.7.0))
+        version: 6.1.1(vite@8.2.4(@types/node@26.4.1)(jiti@2.7.0))
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -49,11 +49,11 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
       vite:
-        specifier: ^8.2.2
-        version: 8.2.2(@types/node@26.4.1)(jiti@2.7.0)
+        specifier: ^8.2.4
+        version: 8.2.4(@types/node@26.4.1)(jiti@2.7.0)
       vite-plugin-dts:
         specifier: ^5.1.0
-        version: 5.1.0(rolldown@1.2.6)(typescript@7.0.2)(vite@8.2.2(@types/node@26.4.1)(jiti@2.7.0))
+        version: 5.1.0(rolldown@1.2.6)(typescript@7.0.2)(vite@8.2.4(@types/node@26.4.1)(jiti@2.7.0))
 
 packages:
 
@@ -859,8 +859,8 @@ packages:
       vite:
         optional: true
 
-  vite@8.2.2:
-    resolution: {integrity: sha512-cFKLV/PRgAUlIRm5WjMjJ86jrftzpqcgH+Us+DS8mI3CDNiH30Whrz8uHL3+MOLPAgqbMBAqWdAHAphOAM+z/Q==}
+  vite@8.2.4:
+    resolution: {integrity: sha512-lfauXnrf2x0p+UoA+wXh0dgFWnUjCyG6Js95KBkgaCwUU9k0DAHI4W6Q0WCx+h+5g+Alce1y4Zi2QjjK0UvGBw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1070,12 +1070,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.3.3
       '@tailwindcss/oxide-win32-x64-msvc': 4.3.3
 
-  '@tailwindcss/vite@4.3.3(vite@8.2.2(@types/node@26.4.1)(jiti@2.7.0))':
+  '@tailwindcss/vite@4.3.3(vite@8.2.4(@types/node@26.4.1)(jiti@2.7.0))':
     dependencies:
       '@tailwindcss/node': 4.3.3
       '@tailwindcss/oxide': 4.3.3
       tailwindcss: 4.3.3
-      vite: 8.2.2(@types/node@26.4.1)(jiti@2.7.0)
+      vite: 8.2.4(@types/node@26.4.1)(jiti@2.7.0)
 
   '@types/estree@1.0.9': {}
 
@@ -1157,10 +1157,10 @@ snapshots:
     dependencies:
       '@typescript/old': typescript@6.0.3
 
-  '@vitejs/plugin-react@6.1.1(vite@8.2.2(@types/node@26.4.1)(jiti@2.7.0))':
+  '@vitejs/plugin-react@6.1.1(vite@8.2.4(@types/node@26.4.1)(jiti@2.7.0))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 8.2.2(@types/node@26.4.1)(jiti@2.7.0)
+      vite: 8.2.4(@types/node@26.4.1)(jiti@2.7.0)
 
   '@volar/language-core@2.4.28':
     dependencies:
@@ -1465,7 +1465,7 @@ snapshots:
 
   undici-types@8.3.0: {}
 
-  unplugin-dts@1.1.0(rolldown@1.2.6)(typescript@7.0.2)(vite@8.2.2(@types/node@26.4.1)(jiti@2.7.0)):
+  unplugin-dts@1.1.0(rolldown@1.2.6)(typescript@7.0.2)(vite@8.2.4(@types/node@26.4.1)(jiti@2.7.0)):
     dependencies:
       '@rollup/pluginutils': 5.4.0
       '@volar/typescript': 2.4.28
@@ -1479,7 +1479,7 @@ snapshots:
       unplugin: 2.3.11
     optionalDependencies:
       rolldown: 1.2.6
-      vite: 8.2.2(@types/node@26.4.1)(jiti@2.7.0)
+      vite: 8.2.4(@types/node@26.4.1)(jiti@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -1490,11 +1490,11 @@ snapshots:
       picomatch: 4.0.7
       webpack-virtual-modules: 0.6.2
 
-  vite-plugin-dts@5.1.0(rolldown@1.2.6)(typescript@7.0.2)(vite@8.2.2(@types/node@26.4.1)(jiti@2.7.0)):
+  vite-plugin-dts@5.1.0(rolldown@1.2.6)(typescript@7.0.2)(vite@8.2.4(@types/node@26.4.1)(jiti@2.7.0)):
     dependencies:
-      unplugin-dts: 1.1.0(rolldown@1.2.6)(typescript@7.0.2)(vite@8.2.2(@types/node@26.4.1)(jiti@2.7.0))
+      unplugin-dts: 1.1.0(rolldown@1.2.6)(typescript@7.0.2)(vite@8.2.4(@types/node@26.4.1)(jiti@2.7.0))
     optionalDependencies:
-      vite: 8.2.2(@types/node@26.4.1)(jiti@2.7.0)
+      vite: 8.2.4(@types/node@26.4.1)(jiti@2.7.0)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@vue/language-core'
@@ -1504,7 +1504,7 @@ snapshots:
       - typescript
       - webpack
 
-  vite@8.2.2(@types/node@26.4.1)(jiti@2.7.0):
+  vite@8.2.4(@types/node@26.4.1)(jiti@2.7.0):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
